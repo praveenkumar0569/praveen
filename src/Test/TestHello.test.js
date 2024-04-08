@@ -1,13 +1,16 @@
 import { render, screen } from "@testing-library/react"
 import TestHello from "./TestHello"
 
-test("first test",()=>{
-    render(<TestHello/>)
-    const testdata=screen.getByText('Hello')
-    expect(testdata).toBeInTheDocument()
-})
-test("By the props", ()=>{
-    render(<TestHello name='praveen'/>)
-    const testele=screen.getByText(/Hello praveen/i)
-    expect(testele).toBeInTheDocument()
+describe("application test",()=>{
+    test("renders",()=>{
+        render(<TestHello/>)
+        const text=screen.getByRole('textbox',{
+            name:"Name",
+        });
+        expect(text).toBeInTheDocument()
+        const comb=screen.getByRole('combobox')
+        expect(comb).toBeInTheDocument()
+        const check=screen.getByRole('checkbox')
+        expect(check).toBeInTheDocument()
+    })
 })
