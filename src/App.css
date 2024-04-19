@@ -2,8 +2,36 @@
   margin: 0;
   padding: 0;
 }
-.images{
-  margin-left: 30px;
-  margin-top: 40px;
-  border-radius: 5px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding to the container */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+.textarea {
+  border: 1px solid red;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 20px; /* Add some space below the textarea */
+}
+
+button {
+  padding: 10px 20px; /* Add padding to buttons */
+  margin-right: 10px; /* Add space between buttons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+button:hover {
+  background-color: #0056b3; /* Change background color on hover */
 }
